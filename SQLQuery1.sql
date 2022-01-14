@@ -62,3 +62,6 @@ from Transaccion
 select count(*)'Cantidad',UsuarioId,AVG(Monto)as promedio
 from Transaccion
 group by UsuarioId
+
+select * from
+Transaccion inner join Tipo
