@@ -5,6 +5,7 @@
     <UserSecretsId>aspnet-PersonalFi-2BC22A9C-9341-4AD8-A5C6-A8969A5D3EDC</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+	<Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
