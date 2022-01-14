@@ -70,3 +70,4 @@ Transaccion t inner join TipoOperacion  ON
 t.TipoOperacionId=TipoOperacion.Id
 
 exec Transacciones_SelecttipoOperacion
+exec Transaccion_Insertar 'Pierre','2022-01-15',1500,1,'Deposito'
