@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using PersonalFi.Models;
 using System;
 using System.Collections.Generic;
@@ -9,8 +12,13 @@ namespace PersonalFi.Controllers
 {
     public class TipoCuentaController : Controller
     {
-        public IActionResult Crear()
+        private readonly string connectionString;
+        public TipoCuentaController()
         {
+           
+        }
+        public IActionResult Crear()
+        { 
             return View();
         }
         [HttpPost]
