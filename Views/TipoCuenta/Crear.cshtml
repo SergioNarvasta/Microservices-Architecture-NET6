@@ -12,7 +12,11 @@
     <div class="mb-3">
         <!--Asp-for toma el nombre del campo y lo coloca en el label-->>
         <label asp-for="Nombre" class="form-label"></label>
-        <input type="text" asp-for="Nombre" class="form-control"/>
+        <input type="text" asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>  
     </div>
     <button type="submit" class="btn btn-success" >Enviar</button>
 </form>
+@section Scripts{ 
+<partial name="_ValidationScriptPartial" />
+}
