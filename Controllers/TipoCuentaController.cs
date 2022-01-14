@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PersonalFi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,15 @@ namespace PersonalFi.Controllers
     {
         public IActionResult Crear()
         {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Crear(TipoCuenta tipoCuenta)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(tipoCuenta);
+            }
             return View();
         }
     }
