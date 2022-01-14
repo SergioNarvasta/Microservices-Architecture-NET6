@@ -11,6 +11,7 @@ namespace PersonalFi.Models
         public int Id { get; set; }
         [Required(ErrorMessage ="El Campo {0} es requerido")]
         [StringLength(maximumLength:50,MinimumLength =3,ErrorMessage ="La longitud del campo{0} debe {2} y {1} caracteres")]
+        [Display(Name ="Nombre del tipo cuenta")]
         public string Nombre { get; set; }
         public int UsuarioId { get; set; }
         public int Orden { get; set; }
