@@ -12,7 +12,7 @@ namespace PersonalFi.Controllers
 {
     public class TipoCuentaController : Controller
     {
-        private readonly string connectionString;
+       
         public TipoCuentaController()
         {
            
