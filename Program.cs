@@ -22,5 +22,6 @@ namespace PersonalFi
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }
