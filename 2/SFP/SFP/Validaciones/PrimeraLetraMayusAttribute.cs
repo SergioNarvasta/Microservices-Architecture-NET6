@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace PersonalFi.Validaciones
+namespace SFP.Validaciones
 {
     public class PrimeraLetraMayusAttribute: ValidationAttribute
     {

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PersonalFi.Servicios
+namespace SFP.Servicios
 {
     public interface IRepositoriosTipoCuenta
     {
@@ -24,7 +24,7 @@ namespace PersonalFi.Servicios
         public void Crear(TipoCuenta tipoCuenta)
         {
             using var connection = new SqlConnection(connectionString);
-            var id = connection.QuerySingle <int> ($@"INSERT INTO TipoCuenta(Nombre,UsuarioId,Orden)
+            var id = connection.QuerySingle<int>($@"INSERT INTO TipoCuenta(Nombre, UsuarioId, Orden)
                                                      VALUES(@Nombre, @UsuarioId, 0);
                                                      SELECT SCOPE_IDENTITY();",tipoCuenta);
             tipoCuenta.Id = id;

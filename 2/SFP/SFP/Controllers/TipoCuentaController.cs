@@ -8,17 +8,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PersonalFi.Controllers
+namespace SFP.Controllers
 {
     public class TipoCuentaController : Controller
     {
-       
-        public TipoCuentaController()
+        //private readonly string connectionString;
+
+        public TipoCuentaController(/*IConfiguration configuration*/)
         {
-           
+            //connectionString = configuration.GetConnectionString("DefaultConnection");
         }
         public IActionResult Crear()
         { 
+            //using(var connection = new SqlConnection(connectionString))
+            //{
+            //    var query = connection.Query("SELECT 1").FirstOrDefault();
+            //}
+
             return View();
         }
         [HttpPost]
