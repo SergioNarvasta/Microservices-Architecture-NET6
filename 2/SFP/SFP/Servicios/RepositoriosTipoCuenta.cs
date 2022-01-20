@@ -1,7 +1,7 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using PersonalFi.Models;
+using SFP.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
