@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SFP.Servicios;
-using PersonalFi.Models;
+
 
 namespace SFP.Controllers
 {
@@ -31,6 +31,8 @@ namespace SFP.Controllers
             {
                 return View(tipoCuenta);
             }
+            tipoCuenta.UsuarioId = 1;
+            repositoriosTipoCuenta.Crear(tipoCuenta);
             return View();
         }
     }
