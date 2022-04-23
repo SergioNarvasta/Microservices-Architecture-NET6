@@ -11,8 +11,7 @@ using System.Threading.Tasks;
 namespace PersonalFi.Controllers
 {
     public class TipoCuentaController : Controller
-    {
-       
+    {      
         public TipoCuentaController()
         {
            
