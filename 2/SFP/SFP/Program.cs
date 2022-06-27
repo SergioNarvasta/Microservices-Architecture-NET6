@@ -1,6 +1,6 @@
 using SFP.Servicios;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = PersonalFi.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
