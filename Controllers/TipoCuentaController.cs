@@ -14,8 +14,7 @@ namespace PersonalFi.Controllers
     {      
         public TipoCuentaController()
         {
-           
-        }
+                  }
         public IActionResult Crear()
         { 
             return View();

@@ -20,7 +20,6 @@ namespace PersonalFi.Servicios
         {
             connectionString = configuration.GetConnectionString("DefaultConnection");
         }
-
         public void Crear(TipoCuenta tipoCuenta)
         {
             using var connection = new SqlConnection(connectionString);
