@@ -16,6 +16,7 @@ namespace SFP.Servicios
     public class RepositoriosTipoCuenta: IRepositoriosTipoCuenta
     {
         public readonly string connectionString;
+
         public RepositoriosTipoCuenta(IConfiguration configuration)
         {
             connectionString = configuration.GetConnectionString("DefaultConnection");

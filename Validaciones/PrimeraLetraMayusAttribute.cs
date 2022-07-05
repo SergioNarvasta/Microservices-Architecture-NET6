@@ -14,6 +14,7 @@ namespace PersonalFi.Validaciones
                 return ValidationResult.Success;
             }
             var primeraletra = value.ToString()[0].ToString();
+
             if(primeraletra != primeraletra.ToUpper())
             {
                 return new ValidationResult("La Primera letra debe ser mayuscula");
