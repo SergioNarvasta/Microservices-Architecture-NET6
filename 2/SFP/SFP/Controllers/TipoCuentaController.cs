@@ -24,6 +24,8 @@ namespace SFP.Controllers
         {  
             return View();
         }
+
+
         [HttpPost]
         public IActionResult Crear(TipoCuenta tipoCuenta)
         {
@@ -33,6 +35,7 @@ namespace SFP.Controllers
             }
             tipoCuenta.UsuarioId = 1;
             repositoriosTipoCuenta.Crear(tipoCuenta);
+
             return View();
         }
     }
