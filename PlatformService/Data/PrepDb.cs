@@ -19,7 +19,8 @@ namespace PlatformService.Data
             {
                 Console.WriteLine("Seeding Data ...");
                 context.Platform.AddRange(
-                    new Platform(){Name="Dot Net",Publisher="Microsoft",Cost="Free"}
+                    new Platform(){Name="Dot Net",Publisher="Microsoft",Cost="Free"},
+                    new Platform(){Name="Azure",Publisher="Microsoft",Cost="50 USD"}
                 );
                 context.SaveChanges();
 

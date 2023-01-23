@@ -16,9 +16,9 @@ namespace PlatformService.AddControllers
         public PlatformsController(IPlatformRepo repository,IMapper mapper)
         {
             _repository = repository;
-            _mapper = mapper;
-    
+            _mapper = mapper; 
         }
+
         [HttpGet]
         public ActionResult <IEnumerable<PlatformReadDto>>GetPlatforms()
         {
@@ -27,6 +27,31 @@ namespace PlatformService.AddControllers
             return Ok(_mapper.Map<IEnumerable<PlatformReadDto>>(platformItem));
 
         }
+
+        [HttpGet("{id}",Name="GetPlatformById")]
+        public ActionResult<PlatformReadDto> GetPlatformById(int Id)
+        {
+            var platformItem = _repository.GetPlatformById(Id);
+            if(platformItem != null)
+            {
+               return Ok(_mapper.Map<PlatformReadDto>(platformItem));
+            }else 
+            
+            return NotFound();
+        }
+
+        [HttpPost]
+        public ActionResult<PlatformReadDto> CreatePlatform(PlatformCreateDto platformCreateDto)
+        {
+            var platformModel = _mapper.Map<Platform>(platformCreateDto);
+            _repository.CreatePlatform(platformModel);
+            _repository.SaveChanges();
+
+            var platformReadDto = _mapper.Map<PlatformReadDto>(platformModel);
+            return CreatedAtRoute(nameof(GetPlatformById), new {Id=platformReadDto.Id},platformReadDto);
+        }
+
+        
     }
     
 }
