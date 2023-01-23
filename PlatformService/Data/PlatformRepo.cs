@@ -9,7 +9,7 @@ namespace PlatformService.Data
         public PlatformRepo(AppDbContext context)
         {
             _context = context;
-
+        }
         public IEnumerable<Platform> GetAllPlatform() 
         {
                 return _context.Platform.ToList();

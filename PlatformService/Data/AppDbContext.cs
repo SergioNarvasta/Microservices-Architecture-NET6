@@ -11,14 +11,14 @@ namespace PlatformService.Data
         public AppDbContext(DbContextOptions<AppDbContext> options)
            : base(options)
         {
-            connectionString = configuration.GetConnectionString("DefaultConnection");
+            //connectionString = configuration.GetConnectionString("DefaultConnection");
         }
 
         /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(connectionString);
         }*/
-        
+
         public DbSet<Platform> Platform { get; set; }
     }
 }
