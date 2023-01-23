@@ -14,10 +14,12 @@ namespace PlatformService.Data
         {
                 return _context.Platform.ToList();
         }
+
         public Platform GetPlatformById(int Id)
         {
            return _context.Platform.FirstOrDefault(x => x.Id == Id);
         }
+
         public void CreatePlatform(Platform plat)
         {
               if(plat==null){
@@ -25,9 +27,10 @@ namespace PlatformService.Data
               }   
               _context.Platform.Add(plat);
         }
+
         public bool SaveChanges()
         {
-
+          return(_context.SaveChanges() >= 0);
         }
     }
 }
